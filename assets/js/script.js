@@ -33,19 +33,50 @@ const questions = [
   const startButton = document.getElementById('start-button')
   startButton.addEventListener('click', startGame)
 
+  /* Event Listener for next button */
+  const nextButton = document.getElementById('next-button')
+  nextButton.addEventListener('click', () => {currentQuestionIndex++})
+
+/* landing and quiz container variables */
   const questionContainer = document.getElementById('question-board')
   const landingContainer = document.getElementById('landing')
 
+  let currentQuestionIndex = 0;
+  let Score = 0;
+
+/* When clicked on start button the question area will show up */
   function startGame() {
     landingContainer.classList.add('hide')
         questionContainer.classList.remove('hide')
-    
+        nextQuestion()
   }
 
   function nextQuestion() {
+    const currentQuestion = questions[currentQuestionIndex];
+    const questionText = document.getElementById('question-text');
+    const answerButtons = document.getElementById('answer-button');
+    
+    questionText.innerHTML ="";
+    answerButtons.innerHTML ="";
 
-  }
+    incrementQuestionNumber();
+
+    questionText.innerHTML = currentQuestion.question;
+
+    currentQuestion.options.forEach(option => {
+        const button = document.createElement("button");
+        button.innerText = option;
+        button.classList.add('button-style');
+        answerButtons.appendChild(button);
+
+        button.addEventListener('click', function() {checkAnswer(option);
+
+        })
+    });
+}
 
   function selectAnswer() {
+
+
 
   }
