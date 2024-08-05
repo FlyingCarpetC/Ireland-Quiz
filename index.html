@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A quiz to test your knowledge about Ireland"
+    />
+    <meta name="keywords" content="quiz, game, test, Ireland, Ireland quiz, Ireland test"/>
+    <meta name="author" content="The Ultimate Ireland Quiz" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>The ultimate Ireland Quiz</title>
+</head>
+<body>
+    <header>
+        <h1 id="header">
+        <a href="index.html" img src ="assets/css/images/irelandhome.png" aria-label="Go to home page" ></a>
+        The ultimate Ireland Quiz
+        </h1>
+    </header>
+
+    <main>
+<!-- Container for Quiz game-->
+<div class="quiz-container">
+    <h2 id="quiz-landing">
+      Do you have the luck of the Irish?</h2>
+      <p>Let's find out!<p>
+        <button aria-label="Start the quiz" id="start-button" class="button-style">
+            Start Quiz
+          </button>
+        </div>
+    
+    <!--Game Board-->
+    <div id="question-board" class="hide">
+        <!--Question count-->
+        <div id="question-count">
+            Question: <span id="current">1</span>
+            <span id="total">5</span>
+        </div>
+        <!--Questions and answer-->
+      <div id="questions"></div>
+      <div id="answers" class="answer-grid" ></div>
+       <!--starting and restarting quiz-->
+    <div id="buttons-container">
+      
+      <button id="next-button" class="button-style">Next</button>
+      </div>
+
+    </div>
+
+    
+      
+
+      <div id="results" class="hide">
+        <button
+        aria-label="Start the quiz again"
+        id="retry-button" class="button-style">Restart Quiz</button>
+        
+        </div>
+      
+    
+  </div>
+
+  <div class="score-area hide">
+  <p class="score-count">Score: <span id="score">0</span></p>
+</div>
+
+
+
+    </main>
+    <footer></footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+
+
+    </main>
