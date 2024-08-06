@@ -40,6 +40,7 @@ const questions = [
 /* landing and quiz container variables */
   const questionContainer = document.getElementById('question-board')
   const landingContainer = document.getElementById('landing')
+  
 
   let currentQuestionIndex = 0;
   let Score = 0;
@@ -48,35 +49,11 @@ const questions = [
   function startGame() {
     landingContainer.classList.add('hide')
         questionContainer.classList.remove('hide')
-        nextQuestion()
+        showQuestion()
   }
-
-  function nextQuestion() {
+ /* Show question by displaying  */
+  function showQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
-    const questionText = document.getElementById('question-text');
-    const answerButtons = document.getElementById('answer-button');
-    
-    questionText.innerHTML ="";
-    answerButtons.innerHTML ="";
-
-    incrementQuestionNumber();
-
-    questionText.innerHTML = currentQuestion.question;
-
-    currentQuestion.options.forEach(option => {
-        const button = document.createElement("button");
-        button.innerText = option;
-        button.classList.add('button-style');
-        answerButtons.appendChild(button);
-
-        button.addEventListener('click', function() {checkAnswer(option);
-
-        })
-    });
-}
-
-  function selectAnswer() {
-
-
-
-  }
+    const questionElement = document.getElementById('question-text')
+    questionElement.innerHTML = currentQuestion.question
+    };
