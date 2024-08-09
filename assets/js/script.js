@@ -73,11 +73,11 @@ const questions = [
   }
     
 
-    function selectAnswer(userAnswer) {
-      if (userAnswer === questions.answer) {
-        button.classList.add('correct')
+    function selectAnswer(button) {
+      if (button.innerText === question.answer) {
+        button.classList.add('correct');
       } else {
-        button.classList.add('wrong')
+        button.classList.add('wrong');
 
       }
       }
